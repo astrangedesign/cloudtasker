@@ -110,7 +110,7 @@ module Cloudtasker
         payload[:http_request][:headers][Cloudtasker::Config::ENCODING_HEADER] = 'Base64'
         payload[:http_request][:body] = Base64.encode64(payload[:http_request][:body])
 
-        payload
+        payload.compact
       end
 
       #

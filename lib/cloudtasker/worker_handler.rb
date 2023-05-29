@@ -159,7 +159,6 @@ module Cloudtasker
           oidc_token: Cloudtasker.config.oidc,
           body: worker_payload.to_json
         }.compact,
-        dispatch_deadline: worker.dispatch_deadline.to_i,
         queue: worker.job_queue
       }
     end
